@@ -10,4 +10,4 @@ for i in range(number):
 
 half_diamond = [void_string for _ in range(number)]
 for i in range(1, len(diamond)+1, 2):
-    diamond[i-1] = get_string(diamond[i-1], i)
+    half_diamond[i-1] = get_string(half_diamond[i-1], i)
