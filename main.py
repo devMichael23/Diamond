@@ -1,16 +1,14 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+def get_string(string: str, level: int) -> str:
+    pass
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+number = int(input("Size of diamond: "))
+void_string = ""
+for i in range(number):
+    void_string += " "
 
+diamond = [void_string for _ in range(number)]
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+for i in range(len(diamond)):
+    diamond[i] = get_string(diamond[i], i)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
