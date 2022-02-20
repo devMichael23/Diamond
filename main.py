@@ -1,5 +1,6 @@
 def get_string(string: str, level: int) -> str:
-    pass
+    result = ' ' * ((len(string) - level) // 2) + '*' * level + ' ' * ((len(string) - level) // 2)
+    return result
 
 
 number = int(input("Size of diamond: "))
@@ -7,8 +8,6 @@ void_string = ""
 for i in range(number):
     void_string += " "
 
-diamond = [void_string for _ in range(number)]
-
-for i in range(len(diamond)):
-    diamond[i] = get_string(diamond[i], i)
-
+half_diamond = [void_string for _ in range(number)]
+for i in range(1, len(diamond)+1, 2):
+    diamond[i-1] = get_string(diamond[i-1], i)
